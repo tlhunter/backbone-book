@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Backbone Application Development Starter</title>
+		<script src="scripts/lodash-1.3.1.js"></script>
+		<script src="scripts/zepto-1.0.js"></script>
+		<script src="scripts/backbone-1.0.0.js"></script>
+	</head>
+	<body>
+		<div id="display">
+			<div class="controls">
+				<button class="add">Add New Contact</button>
+				<form method="" action="" style="display: none;">
+					<input type="text" placeholder="First Name" class="firstName" /><br />
+					<input type="text" placeholder="Last Name" class="lastName" /><br />
+					<input type="text" placeholder="Email" class="email" /><br />
+					<input type="text" placeholder="Phone" class="phoneNumber" /><br />
+					<input type="submit" value="Save Contact" />
+				</form>
+			</div>
+			<div class="listing">
+				Houston, we have a problem.
+			</div>
+		</div>
+		<script id="template-contact" type="template">
+			<div class="contact">
+				<h2><%-firstName%><% if (lastName) { %> <%-lastName%><% } %></h2>
+				<a href="mailto:<%-email%>"><%-email%></a><br />
+				<a href="tel:<%-phoneNumber%>"><%-phoneNumber%></a><br />
+				<button class="delete">Delete</button>
+			</div>
+		</script>
+	</body>
+	<script src="scripts/main.js"></script>
+	<script src="scripts/router.js"></script>
+	<script src="scripts/models/contact.js"></script>
+	<script src="scripts/collections/contact.js"></script>
+	<script src="scripts/views/contact.js"></script>
+	<script src="scripts/views/directory.js"></script>
+</html>
